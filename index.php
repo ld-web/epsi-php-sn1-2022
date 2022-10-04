@@ -37,6 +37,7 @@ echo $age;
 $price = 564.8; // float
 $isAuthorized = false; // bool
 
+// Les trois lignes suivantes sont équivalentes
 $age = $age + 1;
 $age += 1;
 $age++;
@@ -69,3 +70,12 @@ if ($age >= 18) {
 
 // Opérateur ternaire
 echo ($age >= 18) ? "<p>Vous êtes majeur</p>" : "<p>Vous n'êtes pas majeur</p>";
+
+// Constante
+const MA_CONSTANTE = 4;
+const TVA_RATE = 19.6;
+
+$priceHT = 15;
+$priceTTC = $priceHT * (1 + TVA_RATE / 100);
+echo "<p>Mon prix de base (hors taxe) est : $priceHT €</p>";
+echo "<p>Mon prix TTC est : $priceTTC €</p>";
